@@ -19,6 +19,7 @@
 a{
     text-decoration: none;
     color: #D9D9D9;
+    font-size: 0.9rem;
 }
 body{
     background-color: var(--color-negro);
@@ -29,15 +30,20 @@ body{
      color: var(--color-blanco);
    
 }
+.container-modelo-footer {
+    margin-bottom: 0;
+}
 p{
     font-size: clamp(0.1rem, 0.3vw + 0.7rem, 1.1rem);
 }
-h3{
+h3, h4{
+    font-family: 'Inter', sans-serif;
     color: var(--color-blanco);
 }
 /*Encabezado Menu*/
 .index-header{
-    height: 100vh;
+
+    height: fit-content;
     width: auto;
     background-image:url(../img/fondo_header_nuevo.png);
     background-repeat: no-repeat;
@@ -52,12 +58,12 @@ h3{
     justify-content: center;
     gap:4rem;
     padding-top: 80px;
-    height: 100%;
+    height: fit-content;
     align-items: center;
 
 }
 .texto-portada-header, .imagen-portada-header{
-    height: 87vh;
+    height: fit-content;
     width: 35vw;
 }
 .texto-portada-header{
@@ -89,8 +95,6 @@ h3{
     align-items: end;
 }
 .modelo-verde{
-   height: 100%; 
-        width: 100%; 
     object-fit: contain;
 }
 
@@ -101,10 +105,7 @@ h3{
     justify-content: start;
     align-items: end;
 }
-.zorro_artico{
-    width: 100%;
-    height: auto;
-}
+
 .item-info-zorro{
     display: flex;
     flex-direction: column;
@@ -134,7 +135,6 @@ h3{
     padding-top: 5rem;
     position: relative;
     height: fit-content; 
-    overflow: hidden; /* Oculta las partes de las imágenes si se salen */
 }
 .slogan{
     display: flex;
@@ -197,12 +197,12 @@ h3{
     height: 20vh;
 }
 .titulo-productos h2{
-    font-size: clamp(2rem, 5vw + 0.5rem, 2.8rem);
+    font-size: clamp(2rem, 5vw + 0.5rem, 2.5rem);
 }
 .grid-container-productos{
     margin: 0 4rem 0 4rem ; /*arriba, derecha, abajo, izquierda*/
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 3rem;
     justify-content: center;
 }
@@ -216,7 +216,7 @@ h3{
 }
 .imagen-producto{
     background-color: var(--color-gris);
-    height: 25rem;
+    height: 18rem;
     width: auto;
     display: flex;
     justify-content: center;
@@ -237,8 +237,26 @@ h3{
     width: 100%;
     height: auto;
 }
-
-
+/*Inforamción de pagos y envios*/
+.icon{
+    font-size: clamp(1.7rem, 4vw + 0.5rem, 2.5rem);
+}
+/*Estilos de modelo pie de pagina*/
+.container-modelo-footer{
+    margin-top: -2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: fit-content;
+    justify-content: end;
+    align-items: center;
+}
+.container-modelo-footer img{
+    object-fit: contain; 
+}
+footer{
+    margin-top: -5rem;
+}
 
 /*Media Queries Desktop first*/
 /*XX-Large devices (larger desktops, 1400px and up)*/
@@ -258,6 +276,9 @@ h3{
         height: 80%;
         right: 5%;
     }
+    .container-modelo-footer img{
+     height: 38vh;
+    }
 }
 
 /* `xxl` applies to x-large devices (large desktops, less than 1400px)*/
@@ -270,12 +291,15 @@ h3{
     }
     .container-modelo-marron {
         height: 80%;
-        left: 0;
+        left: 6%;
     }
     
     .container-flor-naranja {
         height: 80%;
-        right: 0;
+        right: 6%;
+    }
+    .container-modelo-footer img{
+     height: 33vh;
     }
     
 }
@@ -289,12 +313,15 @@ h3{
     }
     .container-modelo-marron {
         height: 72%;
-        left: 0;
+        left: 4%;
     }
     
     .container-flor-naranja {
         height: 72%;
-        right: 0;
+        right: 4%;
+    }
+    .container-modelo-footer img{
+     height: 45vh;
     }
 }
 
@@ -360,7 +387,6 @@ h3{
     }
     .modelo-verde{
         height: 95%; 
-        width: 100%; 
         /* Aseguramos que la imagen se ajuste dentro de su contenedor (el cuadrado rosa) */
         object-fit: contain;
     }
@@ -376,15 +402,21 @@ h3{
         margin: 0 4rem;
     }
 
-    
     .container-modelo-marron {
         height: 72%;
-        left: 0;
+        left: 6%;
     }
     
     .container-flor-naranja {
         height: 72%;
-        right: 0;
+        right: 6%;
+    }
+    /*Footer*/
+    .container-modelo-footer img{
+     height: 40vh;
+    }
+    .nav-link{
+        color: var(--color-blanco);
     }
 }
 /* `md` applies to small devices (landscape phones, less than 768px)*/
@@ -397,7 +429,6 @@ h3{
         padding: 2rem 3.3rem 3rem 3.3rem; /*arriba, derecha, abajo, izquierda*/
     }
     .item-slogan {
-        height: 40vh; 
         padding-top: 1rem;
     }
     .slogan {
@@ -406,12 +437,15 @@ h3{
     
     .container-modelo-marron {
         height: 67%;
-        left: 0;
+        left: 4%;
     }
     
     .container-flor-naranja {
         height: 65%;
-        right: 0;
+        right: 4%;
+    }
+    .container-modelo-footer img{
+     height: 35vh;
     }
 }
 /*`sm` applies to x-small devices (portrait phones, less than 576px)*/ 
@@ -429,10 +463,13 @@ h3{
     }
     .container-modelo-marron {
         height: 60%;
-        left: 0;
+        left: 3%;
     }
     .container-flor-naranja {
        height: 60%;
-        right: 0;
+        right: 3%;
+    }
+    .container-modelo-footer img{
+     height: 25vh;
     }
 }

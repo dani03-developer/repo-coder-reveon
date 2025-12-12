@@ -17,7 +17,7 @@
     <!--Header-->
         <header class="index-header position-relative">
             <nav class="navbar navbar-expand-lg bg-transparent position-absolute w-100 z-3" data-bs-theme="dark">
-            <div class="container-fluid">
+            <section class="container-fluid">
               <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
               </button>
@@ -25,31 +25,31 @@
               <a href="#" class="nav-link fs-4 d-lg-none">
                     <i class="bi bi-bag"></i>
                 </a>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <section class="collapse navbar-collapse" id="navbarNavAltMarkup">
                   <a class="navbar-brand fw-bold fs-4 text-uppercase d-none d-lg-block" href="#">REVEON</a>
-                <div class="navbar-nav mx-auto text-center">
+                <section class="navbar-nav mx-auto text-center">
                   <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                   <a class="nav-link" href="./pages/catalogo.html">Catálogo</a>
                   <a class="nav-link" href="#">Help & Info</a>
                   <a class="nav-link" href="#">Nosotros</a>
                   <a class="nav-link" href="#">Contacto</a>
-                </div>
-                <div class="d-none d-lg-block">
+                </section>
+                <section class="d-none d-lg-block">
                 <a href="#" class="nav-link fs-5">
                    <i class="bi bi-bag"></i>
                 </a>
-            </div>
-              </div>
-            </div>
+            </section>
+              </section>
+            </section>
         </nav>
         <section class="container-portada-header">
                 <section class="texto-portada-header">
-                    <h1 class="h1-inicio fw-bold">LA BELLEZA ES <br> RESPONSABLE</h1>
+                    <h1 class="h1-inicio fw-semibold">LA BELLEZA ES <br> RESPONSABLE</h1>
                     <p>Descubre nuestra colección cápsula. Cada bolso está meticulosamente forjado con materiales orgánicos y atemporales, diseñados para trascender las estaciones y los ciclos de moda. Una inversión en diseño consciente.</p>
                     <button class="index-header-btn">Adquirir una pieza &nbsp;<i class="bi bi-arrow-right"> </i></button>
                 </section>
                 <section class="imagen-portada-header">
-                    <img class="modelo-verde" src="./img/modelo_verde_png.png" alt="Modelo con bolso verde Reveon">
+                    <img class="modelo-verde w-100" src="./img/modelo_verde_png.png" alt="Modelo con bolso verde Reveon">
                 </section>
         </section>
     </header>
@@ -57,7 +57,7 @@
     <section class="container-info-reveon mx-0">
         <section class="row gx-0">
           <section class="item-imagen-zorro col-12 col-md-6 col-lg-6 ">
-             <img class="zorro_artico" src="./img/zorro-artico-rama.png" alt="Zorro ártico animal representativo de la marca Reveon">
+             <img class="zorro_artico w-100 h-auto" src="./img/zorro-artico-rama.png" alt="Zorro ártico animal representativo de la marca Reveon">
           </section>
           <section class="item-info-zorro col-12 col-md-6 col-lg-6 ">
              <h2>EL ZORRRO ÁRTICO</h2>
@@ -88,10 +88,10 @@
         <section class="titulo-productos">
             <h2>Más Vendidos</h2>
         </section>
-        
+        <!--Venta de los productos-->
         <section class="grid-container-productos">
             <section class="card">
-                <section class="imagen-producto">
+                <section class="imagen-producto"> 
                     <img src="./img/bolso_marronTierra.png" alt="Bolso Tote de hombro en Piñatex marrón oscuro. Diseño robusto y minimalista, con asas rígidas y bandolera.">
                 </section>
                     <h3>El Roble de Invierno</h3>
@@ -139,9 +139,9 @@
                     <a href="#">Comprar &nbsp;<i class="bi bi-arrow-right"></i></a>
             </section>
         </section>
-
+          <!--Pausa - Video-->
          <video class="video" src="./videos/video_bolso_editado.mp4" autoplay loop muted></video>
-        
+        <!--Más articulos-->
          <section class="grid-container-productos">
             <section class="card">
                 <section class="imagen-producto">
@@ -192,8 +192,84 @@
                     <a href="#">Comprar &nbsp;<i class="bi bi-arrow-right"></i></a>
             </section>
         </section>
-    
     </main>
+    <!--Sección de información adicional-->
+        <section class="container-info-envios row gx-0 justify-content-center py-4 text-start gx-0 border-top border-bottom">
+             <section class="col-12 col-sm-10 col-md-3 col-lg-3 px-5 px-md-3">
+                <section class="border-bottom mb-2"> 
+                    <i class="icon bi bi-box-seam"  alt="Logo de caja" ></i>
+                </section>
+                <h4>Envios a todo el país</h4>
+                <p>Los envíos se realizan en un plazo de entre 3 y 7 días hábiles</p>
+            </section>
+             <section class="col-12  col-sm-10 col-md-3 col-lg-3 px-5 px-md-3 ">
+                <section class="border-bottom mb-2"> 
+                <i class="icon bi bi-credit-card-2-front" alt="Logo de tarjeta de credito"></i>
+                </section>
+                 <h4>Medios de pago</h4>
+                  <p>Podés pagar con tarjetas de débito, crédito y efectivo</p>
+              </section>
+            <section class="col-12  col-sm-10 col-md-3 col-lg-3 px-5 px-md-3">
+                 <section class="border-bottom mb-2"> 
+                    <i class="icon bi bi-arrow-counterclockwise"  alt="Logo de devolución"></i>
+                </section>
+                <h4>Cambios y devoluciones</h4>
+                 <p>Realizar cambios y devoluciones los primeros 30 días de la entrega</p>
+             </section>
+        </section>
+        <section class="container-modelo-footer">
+            <img src="./img/Group 49.png" alt="Modelo con bolso morado Reveon a lado del zorro ártico">
+                
+     </section>
+    <!--Footer-->
+    <footer class="border-top">
+        <section class="container-footer py-4 py-md-5 px-4 px-md-5 d-flex flex-column flex-lg-row justify-content-lg-between align-items-lg-center gap-2">
+        
+            <section class="text-start">
+                <h5 class="fw-semibold mb-0">REVEON</h5>
+            </section>
+
+            <section class="links-section d-none d-lg-block">
+                <ul class="list-unstyled d-flex flex-lg-row gap-lg-5 mb-0 justify-content-center">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="./pages/catalogo.html">Catálogo</a></li>
+                    <li><a href="#">Help & Info</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </section>
+
+            <section class="social-section text-end d-none d-lg-block">
+                <i class="bi bi-tiktok me-3 fs-5"></i>
+                <i class="bi bi-facebook me-3 fs-5"></i>
+                <i class="bi bi-instagram fs-5"></i>
+            </section>
+
+        
+            <section class="d-lg-none row">
+                <section class="col-6">
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html">Inicio</a></li>
+                        <li class="mb-2"><a href="./pages/catalogo.html">Catálogo</a></li>
+                        <li class="mb-2"><a href="#">Help & Info</a></li>
+                    </ul>
+                </section>
+                <section class="col-6">
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Nosotros</a></li>
+                        <li class="mb-2"><a href="#">Contacto</a></li>
+                        <li>
+                            <i class="bi bi-tiktok me-1"></i>
+                            <i class="bi bi-facebook me-1"></i>
+                            <i class="bi bi-instagram me-1"></i>
+                        </li>
+                    </ul>
+                </section>
+        </section>
+
+    </section>
+</footer>
+   
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
