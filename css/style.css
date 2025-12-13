@@ -4,8 +4,8 @@
     --color-negro: #0D0B0B;
     --color-blanco: #D9D9D9;
     --color-verde: #2C4B35;
-    --color-gris:  #DADADA;
-    --color-gris-oscuro: #ffffff9e;
+    --color-gris:  #F9F8F6;
+    
 
 }
 
@@ -16,11 +16,6 @@
     
 }
 
-a{
-    text-decoration: none;
-    color: #D9D9D9;
-    font-size: 0.9rem;
-}
 body{
     background-color: var(--color-negro);
     font-family: 'Inter', sans-serif;
@@ -30,8 +25,10 @@ body{
      color: var(--color-blanco);
    
 }
-.container-modelo-footer {
-    margin-bottom: 0;
+a{
+    text-decoration: none;
+    color: var(--color-blanco);
+    font-size: 0.9rem;
 }
 p{
     font-size: clamp(0.1rem, 0.3vw + 0.7rem, 1.1rem);
@@ -40,7 +37,7 @@ h3, h4{
     font-family: 'Inter', sans-serif;
     color: var(--color-blanco);
 }
-/*Encabezado Menu*/
+/*Encabezado - Index*/
 .index-header{
 
     height: fit-content;
@@ -77,7 +74,7 @@ h3, h4{
     font-size: 2.5rem;
 }
 .index-header-btn{
-    background-color: #000;
+    background-color:var(--color-negro);
     color:var(--color-blanco);
     padding: 1rem;
     font-weight: 500;
@@ -195,37 +192,44 @@ h3, h4{
     justify-content: center;
     align-items: center;
     height: 20vh;
+    margin-top: -5rem;
+    
 }
 .titulo-productos h2{
     font-size: clamp(2rem, 5vw + 0.5rem, 2.5rem);
 }
+
 .grid-container-productos{
     margin: 0 4rem 0 4rem ; /*arriba, derecha, abajo, izquierda*/
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    gap: 4rem;
     justify-content: center;
 }
 .card{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     text-align: start;
     padding-bottom: 1rem;
     background-color: transparent;
 }
 .imagen-producto{
     background-color: var(--color-gris);
-    height: 18rem;
-    width: auto;
+    height: 100%;
+    width: fit-content;
     display: flex;
     justify-content: center;
     align-items: end;
+    margin-bottom: 1rem;
 }
 
 .imagen-producto img{
-    height: 80%;
-    width: auto;
+    height: auto;
+    width: 80%;
+    object-fit: contain;
+}
+.card h3{
+    font-size: 1rem;
 }
 .card p{
     color: var(--color-gris);
@@ -250,12 +254,34 @@ h3, h4{
     height: fit-content;
     justify-content: end;
     align-items: center;
+    margin-bottom: 0;
 }
 .container-modelo-footer img{
     object-fit: contain; 
 }
-footer{
+.footer-index{
     margin-top: -5rem;
+}
+
+/*Encabezado - Catálogo*/
+.catalogo-header{
+    height: fit-content;
+    width: auto;
+}
+.navbar {
+    background-color: #DADAD8;
+}
+.logo-bolsa{
+    color: var(--color-negro);
+}
+/*Productos*/
+.grid-container-productos-catalogo{
+    margin: 0 4rem 0 4rem ; /*arriba, derecha, abajo, izquierda*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    column-gap: .75rem;
+    row-gap: 2.5rem;
+    justify-content: center;
 }
 
 /*Media Queries Desktop first*/
@@ -336,12 +362,11 @@ footer{
     }
     .logo-mobile-center {
         position: absolute;   
-        left: 50%;            /* Lo movemos al 50% */
-        transform: translateX(-50%); /* Lo ajustamos para el centro exacto */
-        z-index: 1100; /* El logo queda encima del menú */
+        left: 50%;            
+        transform: translateX(-50%);
+        z-index: 1100; 
     }
 
-    /* Asegurar que la barra de navegación se mantenga fija en la parte superior */
     .navbar {
         position: absolute;
         top: 0;
@@ -352,11 +377,11 @@ footer{
     /* Ajustes para el menú colapsable */
     .navbar-collapse {
         position: absolute;
-        top: 100%; /* justo debajo de la barra */
+        top: 100%;
         left: 0;
         width: 100%;
         background-color: var(--color-negro);
-        z-index: 1080; /* Debajo del logo pero encima del resto de la página */
+        z-index: 1080; 
     }
     /*Sección modelo con bolso verde*/
   .container-portada-header{
@@ -386,8 +411,7 @@ footer{
 
     }
     .modelo-verde{
-        height: 95%; 
-        /* Aseguramos que la imagen se ajuste dentro de su contenedor (el cuadrado rosa) */
+        height: 90%; 
         object-fit: contain;
     }
     .item-info-zorro{
@@ -447,6 +471,7 @@ footer{
     .container-modelo-footer img{
      height: 35vh;
     }
+   
 }
 /*`sm` applies to x-small devices (portrait phones, less than 576px)*/ 
 @media (max-width: 575.98px) { 
@@ -469,6 +494,7 @@ footer{
        height: 60%;
         right: 3%;
     }
+    /*Footer*/
     .container-modelo-footer img{
      height: 25vh;
     }
