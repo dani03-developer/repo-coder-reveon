@@ -375,13 +375,19 @@ h3, h4{
         z-index: 1090;
     }
     /* Ajustes para el menú colapsable */
-    .navbar-collapse {
+    .navbar-collapse{
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
         background-color: var(--color-negro);
         z-index: 1080; 
+    }
+    .nav-link {
+        color: var(--color-blanco);
+    }
+    .nav-link:hover {
+        color: var(--color-gris);
     }
     /*Sección modelo con bolso verde*/
   .container-portada-header{
@@ -439,9 +445,7 @@ h3, h4{
     .container-modelo-footer img{
      height: 40vh;
     }
-    .nav-link{
-        color: var(--color-blanco);
-    }
+    
 }
 /* `md` applies to small devices (landscape phones, less than 768px)*/
 @media (max-width: 767.98px) {
